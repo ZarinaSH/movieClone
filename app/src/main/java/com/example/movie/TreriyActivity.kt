@@ -6,8 +6,7 @@ import kotlinx.android.synthetic.main.treriy.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class TreriyActiv : AppCompatActivity() {
-
+class TreriyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
