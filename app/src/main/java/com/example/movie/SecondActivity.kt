@@ -24,20 +24,23 @@ class SecondActivity : AppCompatActivity() {
             .build()
 
     private val reqTokenClient = retrofit.create(AuthorizedApi::class.java)
+
     var login:String=""
     var password:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+
+
         var a=""
         var b =""
+
         inputPassword.addTextChangedListener { editableText: Editable? ->
 
             if (editableText != null)
             {
                 a = editableText.toString()
             }
-
         }
         inputLogin.addTextChangedListener { editableText: Editable? ->
 
@@ -45,36 +48,14 @@ class SecondActivity : AppCompatActivity() {
             {
                 b = editableText.toString()
             }
-
         }
 
         buttonInput2.setOnClickListener {
             password = a
             login=b
             oneeeee(login,password)
-//            var intent = Intent(this, TreriyActivity::class.java)
-//            startActivity(intent)
+
         }
-
-//        reqTokenClient.createToken().enqueue(object : Callback<ResponseCreateToken> {
-//            override fun onResponse(call: Call<ResponseCreateToken>, response: Response<ResponseCreateToken>) {
-//                val token = response.body()?.requestToken
-//                if (token != null) {
-//                    validateWithLogin(User("WSRtest", "qwerty123", token))
-//                    //validateWithLogin(User(login, password, token))
-//                }
-//            }
-//            override fun onFailure(call: Call<ResponseCreateToken>, t: Throwable) {
-//                Log.e("SecondActivity", t.message ?: "error!")
-//            }
-//        })
-
-//        buttonInput2.setOnClickListener {
-//            password = a
-//            login=b
-//            var intent = Intent(this, TreriyActivity::class.java)
-//            startActivity(intent)
-//        }
 
     }
     private fun oneeeee(login:String,password:String){

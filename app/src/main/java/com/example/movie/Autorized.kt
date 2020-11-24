@@ -16,4 +16,7 @@ interface AuthorizedApi {
     @POST("authentication/session/new")
     fun sesionID(@Query("api_key") api_key: String, @Body token: Token): Call<LastPostData>
 
+    @GET("account")
+    fun userInfo(@Query("api_key") api_key: String,@Query("session_id")session_id:String):Call<UserInfo>
+
 }
