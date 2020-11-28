@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     android:padding="27dp"
-    tools:context=".MainActivity">
+    tools:context=".first.MainActivity">
 
     <ImageView
         android:layout_width="372dp"

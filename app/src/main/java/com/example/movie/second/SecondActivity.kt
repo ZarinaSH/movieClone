@@ -1,13 +1,15 @@
-package com.example.movie
+package com.example.movie.second
 
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import com.example.movie.*
+import com.example.movie.common.*
+import com.example.movie.third.TreriyActivity
 import kotlinx.android.synthetic.main.activity_second.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -58,7 +60,9 @@ class SecondActivity : AppCompatActivity() {
         }
 
     }
+
     private fun oneeeee(login:String,password:String){
+
         reqTokenClient.createToken().enqueue(object : Callback<ResponseCreateToken> {
             override fun onResponse(call: Call<ResponseCreateToken>, response: Response<ResponseCreateToken>) {
                 val token = response.body()?.requestToken

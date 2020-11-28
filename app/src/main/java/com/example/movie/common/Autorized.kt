@@ -1,5 +1,6 @@
-package com.example.movie
+package com.example.movie.common
 
+import com.example.movie.movieList.Movie
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -18,5 +19,8 @@ interface AuthorizedApi {
 
     @GET("account")
     fun userInfo(@Query("api_key") api_key: String,@Query("session_id")session_id:String):Call<UserInfo>
+
+    @GET("movie/top_rated")
+    fun getList(@Query("api_key") api_key: String):Call<Movie>
 
 }
